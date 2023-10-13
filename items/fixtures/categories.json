@@ -1,0 +1,66 @@
+[
+    {
+        "pk": 1,
+        "model": "items.category",
+        "fields": {
+            "name": "toys",
+            "friendly_name": "Toys"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "items.category",
+        "fields": {
+            "name": "decorations",
+            "friendly_name": "Decorations"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "items.category",
+        "fields": {
+            "name": "jumpers",
+            "friendly_name": "Jumpers"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "items.category",
+        "fields": {
+            "name": "hats",
+            "friendly_name": "Hats"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "items.category",
+        "fields": {
+            "name": "other_items",
+            "friendly_name": "Other Items"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "items.category",
+        "fields": {
+            "name": "new_arrivals",
+            "friendly_name": "New Arrivals"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "items.category",
+        "fields": {
+            "name": "deals",
+            "friendly_name": "Deals"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "items.category",
+        "fields": {
+            "name": "clearance",
+            "friendly_name": "Clearance"
+        }
+    }
+]
