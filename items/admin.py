@@ -6,8 +6,8 @@ from .models import Item, Category
 
 class ItemAdmin(admin.ModelAdmin):
     list_display = (
-        'sku',
         'name',
+        'sku',
         'category',
         'price',
         'rating',
