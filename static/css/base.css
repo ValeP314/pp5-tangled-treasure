@@ -238,3 +238,12 @@ a.category-badge>span.badge:hover {
         height: calc(100vh - 116px);
     }
 }
+
+/* vertical navbar on small screens */
+@media screen and (max-width: 400px) {
+
+    #li a {
+            display: block;
+            width: 100px;
+        }
+}
