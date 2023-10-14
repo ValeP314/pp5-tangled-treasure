@@ -148,6 +148,8 @@ View the live project here: [Tangled Treasures]()
 * Search box:
   * The search functionality was tested searching for words included in the title (such as bag, toy, etc.) and included in the descriptions (such as cotton, wool, etc.).
   * The search functionality was tested for categories of items, making sure that they would all work.
+  * Sorting functionality was tested for ascending and descending price, just modifying the URL, and they both worked.
+  * 
 * Opening an item:
   * 
 * Footer:
