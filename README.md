@@ -145,6 +145,8 @@ View the live project here: [Tangled Treasures]()
 
 * List of items:
   * The list of items is fully responsive and displays 4 items on larger screens, 3 on medium screens, 2 on small screens and 1 on mobile devices. The feature has been tested for numerous screen sizes and works well.
+* Search box:
+  * The search functionality was tested searching for words included in the title (such as bag, toy, etc.) and included in the descriptions (such as cotton, wool, etc.).
 * Opening an item:
   * 
 * Footer:
@@ -162,6 +164,7 @@ View the live project here: [Tangled Treasures]()
 ### Fixed Bugs
 
 * The project had to be start from scratch, due to an issue with the payments. The original project was modified and reverted back to previous commits in order to fix the issue, but in the end some crucial code was lost and it was easier to start again, using the code already written up on verison 1. That repository is still accessible here [PP5 - Tangled Treasures](https://github.com/ValeP314/pp5-tangled-treasures/tree/main). 
+* I noticed than the container-fluid in the items.html was a bit overlayed on smaller screens and fixed the issue added a marfin-top spacing to the HTML.
 
 ### Unfixed Bugs
 
