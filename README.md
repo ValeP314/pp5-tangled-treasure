@@ -149,7 +149,10 @@ View the live project here: [Tangled Treasures]()
   * The search functionality was tested searching for words included in the title (such as bag, toy, etc.) and included in the descriptions (such as cotton, wool, etc.).
   * The search functionality was tested for categories of items, making sure that they would all work.
   * Sorting functionality was tested for ascending and descending price, just modifying the URL, and they both worked.
-  * 
+  * Sorting by category was implemented and tested for ascending and descending alphabetical order, modifying the URL, and they both worked fine. 
+  * The number of items called at the beginning of the page list was tested at every search and sorting instance, and worked evry time.
+  * The "Sort by" box was tested for each and every option, and they all worked fine. 
+  * The "Back to the top" button was afded to the list of items page, in oder to go back to the top of the page easily, without having to scroll through hundreds of items. It was tested on numerous searches and sorting instances, and it always worked well. 
 * Opening an item:
   * 
 * Footer:
