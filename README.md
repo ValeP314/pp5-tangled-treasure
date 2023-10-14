@@ -176,6 +176,7 @@ View the live project here: [Tangled Treasures]()
 ### Unfixed Bugs
 
 - Payments: there was an issue with checkout_order that I wasn't able to address in the short amout of time I had.
+- Issue with Shopping bag as per shopping bag video. Implementation suggested in the video but not performed.
 
 
 ## Deployment
