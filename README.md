@@ -142,7 +142,12 @@ View the live project here: [Tangled Treasures]()
 * Navigation Bar:
   * 
 * Home Page:
-
+  * 
+* Footer:
+  * When clicked, the "Facebook" icon opens a new tab and redirects to www.facebook.com.
+  * When clicked, the "Twitter" icon opens a new tab and redirects to www.twitter.com.
+  * When clicked, the "YouTube" icon opens a new tab and redirects to www.youtube.com.
+  * When clicked, the "Instagram" icon opens a new tab and redirects to www.instagram.com.
 * List of items:
   * The list of items is fully responsive and displays 4 items on larger screens, 3 on medium screens, 2 on small screens and 1 on mobile devices. The feature has been tested for numerous screen sizes and works well.
 * Search box:
@@ -152,14 +157,17 @@ View the live project here: [Tangled Treasures]()
   * Sorting by category was implemented and tested for ascending and descending alphabetical order, modifying the URL, and they both worked fine. 
   * The number of items called at the beginning of the page list was tested at every search and sorting instance, and worked evry time.
   * The "Sort by" box was tested for each and every option, and they all worked fine. 
-  * The "Back to the top" button was afded to the list of items page, in oder to go back to the top of the page easily, without having to scroll through hundreds of items. It was tested on numerous searches and sorting instances, and it always worked well. 
+  * The "Back to the top" button was afded to the list of items page, in oder to go back to the top of the page easily, without having to scroll through hundreds of items. It was tested on numerous searches and sorting instances, and it always worked well.
+* Shopping bag:
+  * Functionality to add/remove items was added and tested multiple times successfully.
+  * When adding an item, a success message pops up, to show that the toasts work fine.
+  * When removing an item, a success message pops up, to show that the toasts work fine.
+  * The toast message shows a preview of the shopping bag successfully.
+  * 
+  * 
 * Opening an item:
   * 
-* Footer:
-  * When clicked, the "Facebook" icon opens a new tab and redirects to www.facebook.com.
-  * When clicked, the "Twitter" icon opens a new tab and redirects to www.twitter.com.
-  * When clicked, the "YouTube" icon opens a new tab and redirects to www.youtube.com.
-  * When clicked, the "Instagram" icon opens a new tab and redirects to www.instagram.com.
+
 * When signing in as a regular user:
   * 
 * When signing in as an Admin:
