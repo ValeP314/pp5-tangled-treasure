@@ -27,3 +27,36 @@ def add_to_bag(request, product_id):
 
     request.session['bag'] = bag
     return redirect(redirect_url)
+
+
+def adjust_bag(request, product_id):
+    """Adjust the quantity of the specified product to the specified amount"""
+
+    item = get_object_or_404(Item, pk=product_id)
+    quantity = int(request.POST.get('quantity'))
+    bag = request.session.get('bag', {})
+
+    if quantity > 0:
+        bag[product_id] = quantity
+        
+    else:
+        bag.pop(product_id)
+
+    request.session['bag'] = bag
+    return redirect(reverse('view_bag'))
+
+
+def remove_from_bag(request, product_id):
+    """Remove the item from the shopping bag"""
+
+    try:
+        item = get_object_or_404(Item, pk=product_id)
+        bag = request.session.get('bag', {})
+
+        bag.pop(product_id)
+
+        request.session['bag'] = bag
+        return HttpResponse(status=200)
+
+    except Exception as e:
+        return HttpResponse(status=500)
