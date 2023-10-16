@@ -164,7 +164,8 @@ View the live project here: [Tangled Treasures]()
   * When removing an item, a success message pops up, to show that the toasts work fine.
   * The toast message shows a preview of the shopping bag successfully.
   * 
-  * 
+* Checkout:
+  * The checkout page is updated fter adding or removing items several times.
 * Opening an item:
   * 
 
@@ -180,11 +181,13 @@ View the live project here: [Tangled Treasures]()
 * The project had to be start from scratch, due to an issue with the payments. The original project was modified and reverted back to previous commits in order to fix the issue, but in the end some crucial code was lost and it was easier to start again, using the code already written up on verison 1. That repository is still accessible here [PP5 - Tangled Treasures](https://github.com/ValeP314/pp5-tangled-treasures/tree/main). 
 * I noticed than the container-fluid in the items.html was a bit overlayed on smaller screens and fixed the issue added a margin-top spacing to the HTML.
 * The search box didn't work as the friendly name was used instead of the name of the categories. It was easy to rectify the names and fix the bug.
+* I had a bug with the checout view, as the calc_subtotal would not being found even though calulated in the checkout app. I realised the same function was working in the bag app, so I compared quickly the 2 apps and realised I hadn't loaded the "bag_tools" on the checkout.html file. The page worked well after loading that file.
 
 ### Unfixed Bugs
 
 - Payments: there was an issue with checkout_order that I wasn't able to address in the short amout of time I had.
 - Issue with Shopping bag as per shopping bag video. Implementation suggested in the video but not performed.
+- Issue with quantity buttons not working properly (going to negative figures), to be reviewed.
 
 
 ## Deployment
