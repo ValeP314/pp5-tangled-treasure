@@ -166,6 +166,10 @@ View the live project here: [Tangled Treasures]()
   * 
 * Checkout:
   * The checkout page is updated fter adding or removing items several times.
+* Payments:
+  * Stripe was installed and payments were checked printing "intent" to prove that the form was submitted.
+  * I noticed when checking out that the email address for the confirmation email didn't come up on the checkout_success page. I checked the code and noticed that there was an interruption of the line occourred authomatically through the editor, set to authomatically format pasted content. The issue was easily rectified; another order was submitted and the email address appeared on screen.
+  * The order page was accessed from the admin page, and I made changes to multiple order to make sure that the total and the delivery charges would update correctly. Every attempt was successful.
 * Opening an item:
   * 
 
