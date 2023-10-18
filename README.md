@@ -180,8 +180,8 @@ View the live project here: [Tangled Treasures]()
 * Opening an item:
   *  
 * Profile page:
-  * The Profiles app was created and the webpage loaded fine when accessing from the url in earlt stages of development.
-  * 
+  * The Profiles app was created and the webpage loaded fine when accessing from the url in early stages of development.
+  * The profile page was updated to reflect the username, and it worked fine.
 * When signing in as a regular user:
   *  
 * When signing in as an Admin:
@@ -196,8 +196,11 @@ View the live project here: [Tangled Treasures]()
 * The search box didn't work as the friendly name was used instead of the name of the categories. It was easy to rectify the names and fix the bug.
 * I had a bug with the checkout view, as the calc_subtotal would not being found even though calculated in the checkout app. I realised the same function was working in the bag app, so I compared quickly the 2 apps and realised I hadn't loaded the "bag_tools" on the checkout.html file. The page worked well after loading that file.
 * The webhooks didn't work properly when I first included them. I did some research and found a conversation on Slack about making port 8000 public. When I made the change, the webhooks started working.
-* The payment_intent.succedeed webhook failed for an internal Sever Error (status 500). After comparing the code with Boutique Ado walk-through and checking on Slack, I realised I had never imported Stripe on the webhook_handler.py file.  
-
+* The payment_intent.succedeed webhook failed for an internal Sever Error (status 500). After comparing the code with Boutique Ado walk-through and checking on Slack, I realised I had never imported Stripe on the webhook_handler.py file.
+* In the Profile page, the country field was updated in order to display as grey when not selected. The JS file didn't seem to work, so I checked and compared the code without finding the mistake. In the end, I noticed the countryfield.js file was in the static/profiles folder, instead of the static/profiles/js folder. It was iasy to migrate the file inside rhe relevant folder: when tested, the feature worked fine.  
+* While testing the profile page and attempting to update address or other details, I noticed that the success message also contained the shopping bag (if not empty). To fix that I included another context variable and then updated the success message so to exclude the shopping bag on the profile page.
+* 
+  
 ### Unfixed Bugs
 
 * Payments: there was an issue with checkout_order that I wasn't able to address in the short amout of time I had.
