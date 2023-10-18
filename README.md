@@ -101,13 +101,14 @@ View the live project here: [Tangled Treasures]()
 * [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/)
 
 ## Testing
+
 * I tested this page in different browsers: Chrome, Edge, Safari.
 * The project is responsive, and it looks and works well on different browsers and screen sizes.
   ![Future Home](./static/images/mockup.webp)
 
 ### Validator Testing
 
-- HTML
+* HTML
   * No errors were returned when passing through the official W3C validator:
     * [Home Page](./static/images/html_test.png)
 
@@ -140,9 +141,9 @@ View the live project here: [Tangled Treasures]()
 ### Manual Testing
 
 * Navigation Bar:
-  * 
+  *  
 * Home Page:
-  * 
+  *  
 * Footer:
   * When clicked, the "Facebook" icon opens a new tab and redirects to www.facebook.com.
   * When clicked, the "Twitter" icon opens a new tab and redirects to www.twitter.com.
@@ -154,16 +155,16 @@ View the live project here: [Tangled Treasures]()
   * The search functionality was tested searching for words included in the title (such as bag, toy, etc.) and included in the descriptions (such as cotton, wool, etc.).
   * The search functionality was tested for categories of items, making sure that they would all work.
   * Sorting functionality was tested for ascending and descending price, just modifying the URL, and they both worked.
-  * Sorting by category was implemented and tested for ascending and descending alphabetical order, modifying the URL, and they both worked fine. 
+  * Sorting by category was implemented and tested for ascending and descending alphabetical order, modifying the URL, and they both worked fine.
   * The number of items called at the beginning of the page list was tested at every search and sorting instance, and worked evry time.
-  * The "Sort by" box was tested for each and every option, and they all worked fine. 
+  * The "Sort by" box was tested for each and every option, and they all worked fine.
   * The "Back to the top" button was afded to the list of items page, in oder to go back to the top of the page easily, without having to scroll through hundreds of items. It was tested on numerous searches and sorting instances, and it always worked well.
 * Shopping bag:
   * Functionality to add/remove items was added and tested multiple times successfully.
   * When adding an item, a success message pops up, to show that the toasts work fine.
   * When removing an item, a success message pops up, to show that the toasts work fine.
   * The toast message shows a preview of the shopping bag successfully.
-  * 
+  *  
 * Checkout:
   * The checkout page is updated fter adding or removing items several times.
 * Payments:
@@ -175,28 +176,27 @@ View the live project here: [Tangled Treasures]()
   * The spinning loading overlay was added and tested. It worked after an hard refresh, and it displayed the authentication when the card 4000002500003155 (requiring further authentication) was used.
   * The authentication was checked: if failed, the checkout bag would reload containing the information already filled except for the credit card details, with a message stating that the payment was not successful. In this way, the customer doesn't have to re-fill all fields. The authentication was then confirmed, and the payment was successful.
 * Opening an item:
-  * 
+  *  
 
 * When signing in as a regular user:
-  * 
+  *  
 * When signing in as an Admin:
-  * 
+  *  
 * Security:
-  * 
+  *  
 
 ### Fixed Bugs
 
-* The project had to be start from scratch, due to an issue with the payments. The original project was modified and reverted back to previous commits in order to fix the issue, but in the end some crucial code was lost and it was easier to start again, using the code already written up on verison 1. That repository is still accessible here [PP5 - Tangled Treasures](https://github.com/ValeP314/pp5-tangled-treasures/tree/main). 
+* The project had to be start from scratch, due to an issue with the payments. The original project was modified and reverted back to previous commits in order to fix the issue, but in the end some crucial code was lost and it was easier to start again, using the code already written up on verison 1. That repository is still accessible here [PP5 - Tangled Treasures](https://github.com/ValeP314/pp5-tangled-treasures/tree/main).
 * I noticed than the container-fluid in the items.html was a bit overlayed on smaller screens and fixed the issue added a margin-top spacing to the HTML.
 * The search box didn't work as the friendly name was used instead of the name of the categories. It was easy to rectify the names and fix the bug.
 * I had a bug with the checout view, as the calc_subtotal would not being found even though calulated in the checkout app. I realised the same function was working in the bag app, so I compared quickly the 2 apps and realised I hadn't loaded the "bag_tools" on the checkout.html file. The page worked well after loading that file.
 
 ### Unfixed Bugs
 
-- Payments: there was an issue with checkout_order that I wasn't able to address in the short amout of time I had.
-- Issue with Shopping bag as per shopping bag video. Implementation suggested in the video but not performed.
-- Issue with quantity buttons not working properly (going to negative figures), to be reviewed.
-
+* Payments: there was an issue with checkout_order that I wasn't able to address in the short amout of time I had.
+* Issue with Shopping bag as per shopping bag video. Implementation suggested in the video but not performed.
+* Issue with quantity buttons not working properly (going to negative figures), to be reviewed.
 
 ## Deployment
 
@@ -212,7 +212,7 @@ The live link can be found here - [Tangled Treasures]()
 
 ### Images
 
-- The [homepage]() image was taken from Freepik (<https://www.freepik.com/free-photo/top-view-tea-mug-yarn-basket-with-pine-cones_11630959.htm#page=2&query=crochet&position=33&from_view=search&track=sph>).
+* The [homepage]() image was taken from Freepik (<https://www.freepik.com/free-photo/top-view-tea-mug-yarn-basket-with-pine-cones_11630959.htm#page=2&query=crochet&position=33&from_view=search&track=sph>).
 * the pictures used for the various items, were taken from Freepik, Pixabay, Pexels and Vecteezy.
 * The [icon]() image was taken from Vecteezy (<https://www.vecteezy.com/free-vector/crochet>).
 * The icons were taken from [Font Awesome](https://fontawesome.com/)
