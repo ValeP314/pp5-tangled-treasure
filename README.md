@@ -179,7 +179,9 @@ View the live project here: [Tangled Treasures]()
   * Multiple purchases/payments were put through to make sure that the webhooks were all working after identified bug (then fixed, see below).
 * Opening an item:
   *  
-
+* Profile page:
+  * The Profiles app was created and the webpage loaded fine when accessing from the url in earlt stages of development.
+  * 
 * When signing in as a regular user:
   *  
 * When signing in as an Admin:
