@@ -176,6 +176,7 @@ View the live project here: [Tangled Treasures]()
   * The spinning loading overlay was added and tested. It worked after an hard refresh, and it displayed the authentication when the card 4000002500003155 (requiring further authentication) was used.
   * The authentication was checked: if failed, the checkout bag would reload containing the information already filled except for the credit card details, with a message stating that the payment was not successful. In this way, the customer doesn't have to re-fill all fields. The authentication was then confirmed, and the payment was successful.
   * Webhooks were implemented and were checked sistematically to make sure everything was working fine.
+  * Multiple purchases/payments were put through to make sure that the webhooks were all working after identified bug (then fixed, see below).
 * Opening an item:
   *  
 
@@ -192,7 +193,8 @@ View the live project here: [Tangled Treasures]()
 * I noticed than the container-fluid in the items.html was a bit overlayed on smaller screens and fixed the issue added a margin-top spacing to the HTML.
 * The search box didn't work as the friendly name was used instead of the name of the categories. It was easy to rectify the names and fix the bug.
 * I had a bug with the checkout view, as the calc_subtotal would not being found even though calculated in the checkout app. I realised the same function was working in the bag app, so I compared quickly the 2 apps and realised I hadn't loaded the "bag_tools" on the checkout.html file. The page worked well after loading that file.
-* The webhooks didnàt work properly when I first included them. I did some research and found a conversation on Slack about making port 8000 public. When I made the change, the webhooks started working.
+* The webhooks didn't work properly when I first included them. I did some research and found a conversation on Slack about making port 8000 public. When I made the change, the webhooks started working.
+* The payment_intent.succedeed webhook failed for an internal Sever Error (status 500). After comparing the code with Boutique Ado walk-through and checking on Slack, I realised I had never imported Stripe on the webhook_handler.py file.  
 
 ### Unfixed Bugs
 
