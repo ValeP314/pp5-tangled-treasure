@@ -170,6 +170,8 @@ View the live project here: [Tangled Treasures]()
   * Stripe was installed and payments were checked printing "intent" to prove that the form was submitted.
   * I noticed when checking out that the email address for the confirmation email didn't come up on the checkout_success page. I checked the code and noticed that there was an interruption of the line occourred authomatically through the editor, set to authomatically format pasted content. The issue was easily rectified; another order was submitted and the email address appeared on screen.
   * The order page was accessed from the admin page, and I made changes to multiple order to make sure that the total and the delivery charges would update correctly. Every attempt was successful.
+  * The checkout_page was updated to reflect order details, and it worked well. Some prices displayed in dollars instead of euros, so I substituted the dollar symbol with the euro symbol.
+  * The checkout_success page was tested on different size devices and was fully responsive.
 * Opening an item:
   * 
 
