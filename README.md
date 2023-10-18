@@ -175,6 +175,7 @@ View the live project here: [Tangled Treasures]()
   * The checkout_success page was tested on different size devices and was fully responsive.
   * The spinning loading overlay was added and tested. It worked after an hard refresh, and it displayed the authentication when the card 4000002500003155 (requiring further authentication) was used.
   * The authentication was checked: if failed, the checkout bag would reload containing the information already filled except for the credit card details, with a message stating that the payment was not successful. In this way, the customer doesn't have to re-fill all fields. The authentication was then confirmed, and the payment was successful.
+  * Webhooks were implemented and were checked sistematically to make sure everything was working fine.
 * Opening an item:
   *  
 
@@ -190,7 +191,8 @@ View the live project here: [Tangled Treasures]()
 * The project had to be start from scratch, due to an issue with the payments. The original project was modified and reverted back to previous commits in order to fix the issue, but in the end some crucial code was lost and it was easier to start again, using the code already written up on verison 1. That repository is still accessible here [PP5 - Tangled Treasures](https://github.com/ValeP314/pp5-tangled-treasures/tree/main).
 * I noticed than the container-fluid in the items.html was a bit overlayed on smaller screens and fixed the issue added a margin-top spacing to the HTML.
 * The search box didn't work as the friendly name was used instead of the name of the categories. It was easy to rectify the names and fix the bug.
-* I had a bug with the checout view, as the calc_subtotal would not being found even though calulated in the checkout app. I realised the same function was working in the bag app, so I compared quickly the 2 apps and realised I hadn't loaded the "bag_tools" on the checkout.html file. The page worked well after loading that file.
+* I had a bug with the checkout view, as the calc_subtotal would not being found even though calculated in the checkout app. I realised the same function was working in the bag app, so I compared quickly the 2 apps and realised I hadn't loaded the "bag_tools" on the checkout.html file. The page worked well after loading that file.
+* The webhooks didnàt work properly when I first included them. I did some research and found a conversation on Slack about making port 8000 public. When I made the change, the webhooks started working.
 
 ### Unfixed Bugs
 
