@@ -182,6 +182,9 @@ View the live project here: [Tangled Treasures]()
 * Profile page:
   * The Profiles app was created and the webpage loaded fine when accessing from the url in early stages of development.
   * The profile page was updated to reflect the username, and it worked fine.
+  * When making a purchase, it is possible to save the address, phone number and all relevant info clicking on a checkbox. The featuee has been tested deleting all info and then selecting the box, and the address was updated. 
+  * The order history displays a list of all orders, showing order number, date, items and total price. There is a link in the order number that brings back to the full success page that displays all info, and works fine.
+  * When attempting a new order, the info saved are displayed in the form correctly. I tested many changes, and they were all updated promptly.
 * When signing in as a regular user:
   *  
 * When signing in as an Admin:
