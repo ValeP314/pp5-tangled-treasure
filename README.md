@@ -186,6 +186,8 @@ View the live project here: [Tangled Treasures]()
   * When making a purchase, it is possible to save the address, phone number and all relevant info clicking on a checkbox. The featuee has been tested deleting all info and then selecting the box, and the address was updated. 
   * The order history displays a list of all orders, showing order number, date, items and total price. There is a link in the order number that brings back to the full success page that displays all info, and works fine.
   * When attempting a new order, the info saved are displayed in the form correctly. I tested many changes, and they were all updated promptly.
+* Adding items:
+  * The Product Management page was created and tested using prices with more than 6 figures, or items with or without a picture. Ano_image picture was uploaded onto the media folder to account for items without a picture.
 * When signing in as a regular user:
   *  
 * When signing in as an Admin:
@@ -210,6 +212,8 @@ View the live project here: [Tangled Treasures]()
 * Payments: there was an issue with checkout_order that I wasn't able to address in the short amout of time I had.
 * Issue with Shopping bag as per shopping bag video. Implementation suggested in the video but not performed.
 * Issue with quantity buttons not working properly (going to negative figures), to be reviewed.
+* Issue with pictures not formatted (all different sizes).
+* Issue with footer not anchored at the bottom of the page. Perhaps add a top margin?
 
 ## Deployment
 
