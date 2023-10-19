@@ -186,8 +186,10 @@ View the live project here: [Tangled Treasures]()
   * When making a purchase, it is possible to save the address, phone number and all relevant info clicking on a checkbox. The featuee has been tested deleting all info and then selecting the box, and the address was updated. 
   * The order history displays a list of all orders, showing order number, date, items and total price. There is a link in the order number that brings back to the full success page that displays all info, and works fine.
   * When attempting a new order, the info saved are displayed in the form correctly. I tested many changes, and they were all updated promptly.
-* Adding items:
+* Product Management:
   * The Product Management page was created and tested using prices with more than 6 figures, or items with or without a picture. Ano_image picture was uploaded onto the media folder to account for items without a picture.
+  * The editing functionality was tested modifying every parameter in existing items, and then editing them back. The validations worked fine for prices with more than 6 figures.
+  * The delete item functionality was tested adding a new item and then deleting it from the Product Management page. The success message displayed correctly and the item was deleted promptly.
 * When signing in as a regular user:
   *  
 * When signing in as an Admin:
@@ -205,7 +207,7 @@ View the live project here: [Tangled Treasures]()
 * The payment_intent.succedeed webhook failed for an internal Sever Error (status 500). After comparing the code with Boutique Ado walk-through and checking on Slack, I realised I had never imported Stripe on the webhook_handler.py file.
 * In the Profile page, the country field was updated in order to display as grey when not selected. The JS file didn't seem to work, so I checked and compared the code without finding the mistake. In the end, I noticed the countryfield.js file was in the static/profiles folder, instead of the static/profiles/js folder. It was iasy to migrate the file inside rhe relevant folder: when tested, the feature worked fine.  
 * While testing the profile page and attempting to update address or other details, I noticed that the success message also contained the shopping bag (if not empty). To fix that I included another context variable and then updated the success message so to exclude the shopping bag on the profile page.
-* 
+* When editing an item, I noticed that an error message would display instead of an info or warning message, so I changed it to warning instead.
   
 ### Unfixed Bugs
 
@@ -214,6 +216,7 @@ View the live project here: [Tangled Treasures]()
 * Issue with quantity buttons not working properly (going to negative figures), to be reviewed.
 * Issue with pictures not formatted (all different sizes).
 * Issue with footer not anchored at the bottom of the page. Perhaps add a top margin?
+* there is no confirmation for deleting items, it might be implemented.
 
 ## Deployment
 
