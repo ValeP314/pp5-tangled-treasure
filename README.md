@@ -177,6 +177,7 @@ View the live project here: [Tangled Treasures]()
   * The authentication was checked: if failed, the checkout bag would reload containing the information already filled except for the credit card details, with a message stating that the payment was not successful. In this way, the customer doesn't have to re-fill all fields. The authentication was then confirmed, and the payment was successful.
   * Webhooks were implemented and were checked sistematically to make sure everything was working fine.
   * Multiple purchases/payments were put through to make sure that the webhooks were all working after identified bug (then fixed, see below).
+  * Confirmation emails were set up and tested on the console. The template was displayed nicely and it worked fine.
 * Opening an item:
   *  
 * Profile page:
