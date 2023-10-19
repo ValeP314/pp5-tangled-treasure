@@ -190,6 +190,9 @@ View the live project here: [Tangled Treasures]()
   * The Product Management page was created and tested using prices with more than 6 figures, or items with or without a picture. Ano_image picture was uploaded onto the media folder to account for items without a picture.
   * The editing functionality was tested modifying every parameter in existing items, and then editing them back. The validations worked fine for prices with more than 6 figures.
   * The delete item functionality was tested adding a new item and then deleting it from the Product Management page. The success message displayed correctly and the item was deleted promptly.
+  * When editing an item picture, the widget allows to upload a new picture from the pc.
+  * The delete picture functionality was tested checking the relevant box and removing the picture associated with the item, and loading a new one then.
+  * 
 * When signing in as a regular user:
   *  
 * When signing in as an Admin:
@@ -208,6 +211,7 @@ View the live project here: [Tangled Treasures]()
 * In the Profile page, the country field was updated in order to display as grey when not selected. The JS file didn't seem to work, so I checked and compared the code without finding the mistake. In the end, I noticed the countryfield.js file was in the static/profiles folder, instead of the static/profiles/js folder. It was iasy to migrate the file inside rhe relevant folder: when tested, the feature worked fine.  
 * While testing the profile page and attempting to update address or other details, I noticed that the success message also contained the shopping bag (if not empty). To fix that I included another context variable and then updated the success message so to exclude the shopping bag on the profile page.
 * When editing an item, I noticed that an error message would display instead of an info or warning message, so I changed it to warning instead.
+* When adding the widgets, I got an error stating that the items/custom_widget_templates/custom_clearable_file_input.html didn't exist. Checking the location of the custom_widget_templates folder, I realised that it should have been inside the items folder, so I moved it and the widget worked fine.
   
 ### Unfixed Bugs
 
