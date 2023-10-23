@@ -210,12 +210,12 @@ View the live project here: [Tangled Treasures]()
 * The payment_intent.succedeed webhook failed for an internal Sever Error (status 500). After comparing the code with Boutique Ado walk-through and checking on Slack, I realised I had never imported Stripe on the webhook_handler.py file.
 * In the Profile page, the country field was updated in order to display as grey when not selected. The JS file didn't seem to work, so I checked and compared the code without finding the mistake. In the end, I noticed the countryfield.js file was in the static/profiles folder, instead of the static/profiles/js folder. It was iasy to migrate the file inside rhe relevant folder: when tested, the feature worked fine.  
 * While testing the profile page and attempting to update address or other details, I noticed that the success message also contained the shopping bag (if not empty). To fix that I included another context variable and then updated the success message so to exclude the shopping bag on the profile page.
-* When editing an item, I noticed that an error message would display instead of an info or warning message, so I changed it to warning instead.
+* When editing an item, I noticed that an error message would display instead of an info or warning message, so I changed it to warning instead. Later on, I found that the toast_info.html file contained a warning message instead of an Info message, so I changed it to clear the previous bug.
 * When adding the widgets, I got an error stating that the items/custom_widget_templates/custom_clearable_file_input.html didn't exist. Checking the location of the custom_widget_templates folder, I realised that it should have been inside the items folder, so I moved it and the widget worked fine.
   
 ### Unfixed Bugs
 
-* Payments: there was an issue with checkout_order that I wasn't able to address in the short amout of time I had.
+* 
 * Issue with Shopping bag as per shopping bag video. Implementation suggested in the video but not performed.
 * Issue with quantity buttons not working properly (going to negative figures), to be reviewed.
 * Issue with pictures not formatted (all different sizes).
