@@ -332,18 +332,18 @@ input[name='q']::placeholder {
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     .header-container {
-        padding-top: 116px;
+        padding-top: 180px;
     }
 
     body {
-        height: calc(100vh - 116px);
+        height: calc(100vh - 180px);
     }
 }
 
 /* vertical navbar on small screens */
 @media screen and (max-width: 460px) {
     .header-container {
-        padding-top: 180px;
+        padding-top: 300px;
     }
 
     #li a {
