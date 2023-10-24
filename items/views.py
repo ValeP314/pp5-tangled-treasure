@@ -5,7 +5,7 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 
 from .models import Item, Category
-from .forms import ItemForm
+from .forms import ItemForm, ReviewForm
 
 # Create your views here.
 
@@ -34,7 +34,7 @@ def all_items(request):
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
             items = items.order_by(sortkey)
-        
+
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             items = items.filter(category__name__in=categories)
@@ -66,12 +66,34 @@ def item_detail(request, item_id):
     """ A view to show individual item details """
 
     item = get_object_or_404(Item, pk=item_id)
+    reviews = item.reviews.filter(approved=True).order_by('-created_on')
+    new_review = None    # Comment posted
+
+    if request.method == 'POST':
+        review_form = ReviewForm(data=request.POST)
+        if review_form.is_valid():
+            # Create Review object but don't save to database yet
+            new_review = review_form.save(commit=False)
+            # Assign the current item to the review
+            new_review.item = item
+            # Save the review to the database
+            new_review.save()
+
+            messages.info(request, 'Review added! Thank you.')
+            return redirect(reverse('item_detail', args=[item.id]))
+    else:
+        review_form = ReviewForm()
+
+    template_name = 'items/item_detail.html'
 
     context = {
         'item': item,
+        'reviews': reviews,
+        'new_review': new_review,
+        'review_form': review_form,
     }
 
-    return render(request, 'items/item_detail.html', context)
+    return render(request, template_name, context)
 
 
 @login_required
