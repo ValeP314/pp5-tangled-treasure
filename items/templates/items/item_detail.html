@@ -120,6 +120,20 @@
                     </p>
                     {{ review.body | linebreaks }}
                 </div>
+
+                {% if review.comment %}
+                <div class="comments" style="padding: 10px; margin-left: 60px;">
+                    <p class="font-weight-bold">
+                        {{ review.comment.author.username }} on
+                        <span class=" text-muted font-weight-normal">
+                            {{ review.comment.created_on }}
+                        </span> replied to:
+                        {{ question.body }}
+                    </p>
+                    {{ review.comment.body | linebreaks }}
+                </div>
+                {% endif %}
+
                 {% endfor %}
 
             </div>

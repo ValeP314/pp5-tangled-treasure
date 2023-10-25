@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Item, Category, Review
+from .models import Item, Category, Review, Comment
 
 # Register your models here.
 
@@ -37,3 +37,9 @@ class ReviewAdmin(admin.ModelAdmin):
 
     def approve_reviews(self, request, queryset):
         queryset.update(approved=True)
+
+
+@admin.register(Comment)
+class CommentAdmin(admin.ModelAdmin):
+    list_filter = ('created_on',)
+    list_display = ('author', 'review', 'created_on')

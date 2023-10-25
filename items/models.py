@@ -1,5 +1,6 @@
 from django.db import models
 from profiles.models import UserProfile
+from django.contrib.auth.models import User
 
 
 class Category(models.Model):
@@ -46,3 +47,18 @@ class Review(models.Model):
 
     def __str__(self):
         return f"Review {self.body} by {self.name}"
+
+
+class Comment(models.Model):
+    review = models.OneToOneField(
+        Review, on_delete=models.CASCADE, related_name="comment")
+    author = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="comments")
+    body = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['created_on']
+
+    def __str__(self):
+        return f"Answer to {self.author}: {self.body}"
