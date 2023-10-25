@@ -22,10 +22,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-x2xi0t00o=ephj$)o=zpeyfc%h#2obp&(xl-8-yvt=io4e_b!*'
+SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = [
     'tangled-treasures-v2-c974cba676a4.herokuapp.com', 'valep314-pp5-tangled-tre-9723tp2wub.us2.codeanyapp.com']
