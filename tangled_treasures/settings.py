@@ -27,7 +27,8 @@ SECRET_KEY = 'django-insecure-x2xi0t00o=ephj$)o=zpeyfc%h#2obp&(xl-8-yvt=io4e_b!*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['tangled-treasures-v2.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = [
+    'tangled-treasures-v2-c974cba676a4.herokuapp.com', 'valep314-pp5-tangled-tre-9723tp2wub.us2.codeanyapp.com']
 
 
 # Application definition
