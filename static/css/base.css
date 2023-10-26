@@ -304,6 +304,10 @@ input[name='q']::placeholder {
     .container {
         max-width: 80%;
     }
+    
+    .display-4 {
+        margin-top: 100px;
+    }
 }
 
 /* For large to medium screens */
