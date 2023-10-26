@@ -28,11 +28,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = DEBUG = 'DEVELOPMENT' in os.environ
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
-    'tangled-treasures-v2-c974cba676a4.herokuapp.com', '8000-valep314-pp5-tangled-tre-9723tp2wub.us2.codeanyapp.com']
+    'tangled-treasures-v2-c974cba676a4.herokuapp.com',
+    '8000-valep314-pp5-tangled-tre-9723tp2wub.us2.codeanyapp.com']
 
 
 # Application definition
@@ -85,7 +85,7 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request',  # required by allauth
+                'django.template.context_processors.request',  # req by allauth
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',

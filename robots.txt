@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /bag/
+Sitemap:https://tangled-treasures-v2-c974cba676a4.herokuapp.com/sitemap.xml
