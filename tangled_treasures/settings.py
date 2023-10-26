@@ -14,6 +14,9 @@ import os
 from pathlib import Path
 import dj_database_url
 
+if os.path.exists("env.py"):
+    import env
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -25,10 +28,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = DEBUG = 'DEVELOPMENT' in os.environ
+# DEBUG = DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = True
 
 ALLOWED_HOSTS = [
-    'tangled-treasures-v2-c974cba676a4.herokuapp.com', 'valep314-pp5-tangled-tre-9723tp2wub.us2.codeanyapp.com']
+    'tangled-treasures-v2-c974cba676a4.herokuapp.com', '8000-valep314-pp5-tangled-tre-9723tp2wub.us2.codeanyapp.com']
 
 
 # Application definition
