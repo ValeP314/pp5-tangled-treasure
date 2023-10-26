@@ -2,7 +2,7 @@
 
 Welcome to Tangled Treasures!
 
-View the live project here: [Tangled Treasures]()
+View the live project here: [Tangled Treasures](https://tangled-treasures-v2-c974cba676a4.herokuapp.com/)
 
 ## Index – Table of Contents
 
@@ -17,6 +17,9 @@ View the live project here: [Tangled Treasures]()
 ## User Experience (UX)
 
 ### User stories
+
+The User stories can be found on [Tangled Treasures V2 User Stories](https://github.com/users/ValeP314/projects/8/views/1)
+![User Stories](./docs/readme_docs/user_stories.png)
 
 * US01: View site.
   * As a **Site User** I can **access the Home page** so that I can **understand the site purpose and decide if relevant to my needs**.
@@ -47,33 +50,64 @@ View the live project here: [Tangled Treasures]()
 
 ### Existing Features
 
-* **Favicon**
-
-  * A Favicon has been implemented using the image on the logo and main image of the website.
-  * It will be easier for the User to identify the website if they have more than one tab open.
-  * ![Favicon](./static/images/favicon.png)
-
 * **Navigation Bar**
-
-* **The landing page image**
-
-* **The listings list**
-
-* **The listings details**
-
-* **The Admin functionalities**
   
+  * The Navigation bar will show the same main features, even though the User might be registered or not.
+    ![Navigation Bar](./docs/readme_docs/nav_bar.png)
+    * If the Site User is not Logged in, the "My Account" menu will prompt the opportunity to register or to login.
+        ![Navigation Bar Unknown User](./docs/readme_docs/nav_bar_uu.png)
+    * If the Site User is logged in, the "My Account" menu will includes links to the "My Profile" page and the Logout form.
+        ![Navigation Bar User](./docs/readme_docs/nav_bar_ru.png)
+    * If the Site User is a Superuser, there is also a link to the Product Management page.
+        ![Navigation Bar Admin](./docs/readme_docs/nav_bar_admin.png)
+    * Featured on all pages, the navigation bar is fully responsive, even on mobile.
+        ![Navigation Bar User](./docs/readme_docs/nav_bar_mobile.png)
+  * This section will allow the user to easily navigate and sign In/Up to make use of the full website functionality, without having to revert back to the previous page.
+* **The landing page image**
+  * The Landing page includes a logo and a brand name, and helps the User to identidy the website.
+    ![Landing Page](./docs/readme_docs/landing.png)
+* **The items list**
+  * The items list is paginated and includes a picture and a name of the item, to allow the user to visualise the items sold on the platform.
+  * The list can be ordered by price, rate and category, to help the User identifying the items that they might like.
+    ![Items list](./docs/readme_docs/list.png)
+* **The item details**
+  * The item details page includes the picture and the name, and a short description of the items and the materials used.
+    ![Item details](./docs/readme_docs/details.png)
+  * Below, there is a list of reviews that have been added by registered Site Users.
+  * If the Site User is not registered, there is a prompt to sign in/up, in order to review the items.
+  * If the Site User is registered, they will be able to review items through a form.
+* **The Admin functionalities**
+  * The Admin will be able to add, edit and delete items directly through the webpage, without the need of accessing the admin site. They can do it from the Product Management menu:
+  ![Product Management menu](./docs/readme_docs/prod_management.png)
+  * or from the list of items:
+  ![Add from list](./docs/readme_docs/admin_add_list.png)
+  * or from the details page:
+  ![Add from details page](./docs/readme_docs/admin_add_item.png)
 * **The Footer**
-
-* **Sign In/Register Form**
-
-* **Sign Up Form**
-
+  * The footer section includes links to the relevant social media sites for Future Home. The links will open to a new tab to allow easy navigation for the Site User.
+  * The footer is valuable to the user as it encourages them to keep connected via social media.
+    ![Footer](./docs/readme_docs/footer.png)
+* **Sign Up/Register Form**
+  * The "Sign Up" will provide the user with the opportunity to register to the website.
+  * In case the Site User is already registered, it provides the option to Sign In instead.
+  * This section is valuable to the user as they will be able to access the full website functionality.
+    ![Sign Up Form](./docs/readme_docs/sign_up.png)
+  * The form collects the User username, an email address, and a password, that needs to be confirmed for registration purpouse.
+    ![Email verification](./docs/readme_docs/verify_email.png)
+* **Sign In Form**
+  * The "Sign Up" will provide the user with the opportunity to sign up to the website.
+  * In case the Site User is not already registered, it provides the option to Register instead.
+  * This section is valuable to the user as they will be able to access the full website functionality.
+  * The form collects the username and password only.
+    ![Sign In Form](./docs/readme_docs/sign_in.png)
 * **Logout Form**
+  * This page will allow the Site User to log out.
+  * After clicking the button, a second page will ask to confirm the intention to log out.
+    ![Logout Form](./docs/readme_docs/logout.png)
 
 ### Features Left to Implement
 
-/
+* A Favicon could be implemented to allow the User to easily identify the website if they have more than one tab open
 
 ## Technologies Used
 
@@ -104,7 +138,7 @@ View the live project here: [Tangled Treasures]()
 
 * I tested this page in different browsers: Chrome, Edge, Safari.
 * The project is responsive, and it looks and works well on different browsers and screen sizes.
-  ![Future Home](./static/images/mockup.webp)
+  ![Future Home](./docs/readme_docs/responsiveness.png)
 
 ### Validator Testing
 
@@ -135,15 +169,18 @@ View the live project here: [Tangled Treasures]()
 
 * Accessibility
   * Performance, accessibility and best practices were assessed through Lighthouse in devtools and passed the testing with good scores.
-    ![Lighthouse](./static/images/lighthouse.png)
-  * The Performance score might be improved converting the .png files in .webp files, in order to compress the images and facilitate the upload when the page is loaded. For lack of time, I did not convert them, but it is certainly an improvement that can be made.
+    ![Lighthouse](./docs/readme_docs/lighthouse.png)
+  * The Performance score was improved converting the .png files in .webp files, in order to compress the images and facilitate the upload when the page is loaded.
+  * Accessibility can be improved checking lists items, but overall is good.
+  * Best practices and SEO obtained great scores.
 
 ### Manual Testing
 
 * Navigation Bar:
-  *  
+  * The navigation bar was modified to make it fully responsive. The collapsible menu was implemented for the mobile version, and icons and font-size were reduced on smaller screens in order to fit in one row.
+  * All links were tested and worked well as expected.
 * Home Page:
-  *  
+  * The icon in the banner pulses and was obtained from FontAwecome.
 * Footer:
   * When clicked, the "Facebook" icon opens a new tab and redirects to www.facebook.com.
   * When clicked, the "Twitter" icon opens a new tab and redirects to www.twitter.com.
@@ -164,9 +201,8 @@ View the live project here: [Tangled Treasures]()
   * When adding an item, a success message pops up, to show that the toasts work fine.
   * When removing an item, a success message pops up, to show that the toasts work fine.
   * The toast message shows a preview of the shopping bag successfully.
-  *  
 * Checkout:
-  * The checkout page is updated fter adding or removing items several times.
+  * The checkout page was updated after adding or removing items several times, and it worked well as expected.
 * Payments:
   * Stripe was installed and payments were checked printing "intent" to prove that the form was submitted.
   * I noticed when checking out that the email address for the confirmation email didn't come up on the checkout_success page. I checked the code and noticed that there was an interruption of the line occourred authomatically through the editor, set to authomatically format pasted content. The issue was easily rectified; another order was submitted and the email address appeared on screen.
@@ -178,12 +214,10 @@ View the live project here: [Tangled Treasures]()
   * Webhooks were implemented and were checked sistematically to make sure everything was working fine.
   * Multiple purchases/payments were put through to make sure that the webhooks were all working after identified bug (then fixed, see below).
   * Confirmation emails were set up and tested on the console. The template was displayed nicely and it worked fine.
-* Opening an item:
-  *  
 * Profile page:
   * The Profiles app was created and the webpage loaded fine when accessing from the url in early stages of development.
   * The profile page was updated to reflect the username, and it worked fine.
-  * When making a purchase, it is possible to save the address, phone number and all relevant info clicking on a checkbox. The featuee has been tested deleting all info and then selecting the box, and the address was updated. 
+  * When making a purchase, it is possible to save the address, phone number and all relevant info clicking on a checkbox. The featuee has been tested deleting all info and then selecting the box, and the address was updated.
   * The order history displays a list of all orders, showing order number, date, items and total price. There is a link in the order number that brings back to the full success page that displays all info, and works fine.
   * When attempting a new order, the info saved are displayed in the form correctly. I tested many changes, and they were all updated promptly.
 * Product Management:
@@ -192,13 +226,8 @@ View the live project here: [Tangled Treasures]()
   * The delete item functionality was tested adding a new item and then deleting it from the Product Management page. The success message displayed correctly and the item was deleted promptly.
   * When editing an item picture, the widget allows to upload a new picture from the pc.
   * The delete picture functionality was tested checking the relevant box and removing the picture associated with the item, and loading a new one then.
-  * 
-* When signing in as a regular user:
-  *  
-* When signing in as an Admin:
-  *  
 * Security:
-  *  
+  * I tested the website security trying to access the admin platform when not logged in, and I wasn't able to access the interface as expected.
 
 ### Fixed Bugs
 
@@ -212,19 +241,17 @@ View the live project here: [Tangled Treasures]()
 * While testing the profile page and attempting to update address or other details, I noticed that the success message also contained the shopping bag (if not empty). To fix that I included another context variable and then updated the success message so to exclude the shopping bag on the profile page.
 * When editing an item, I noticed that an error message would display instead of an info or warning message, so I changed it to warning instead. Later on, I found that the toast_info.html file contained a warning message instead of an Info message, so I changed it to clear the previous bug.
 * When adding the widgets, I got an error stating that the items/custom_widget_templates/custom_clearable_file_input.html didn't exist. Checking the location of the custom_widget_templates folder, I realised that it should have been inside the items folder, so I moved it and the widget worked fine.
+* Issue with pictures not formatted (all different sizes): the problem was fixed through CSS.
+* Issue with footer not anchored at the bottom of the page. I added the class container-fluid and fixed it through CSS.
   
 ### Unfixed Bugs
 
-* 
 * Issue with Shopping bag as per shopping bag video. Implementation suggested in the video but not performed.
-* Issue with quantity buttons not working properly (going to negative figures), to be reviewed.
-* Issue with pictures not formatted (all different sizes).
-* Issue with footer not anchored at the bottom of the page. Perhaps add a top margin?
-* there is no confirmation for deleting items, it might be implemented.
+* There is no confirmation page for deleting items, it might be implemented.
 
 ## Deployment
 
-The live link can be found here - [Tangled Treasures]()
+The live link can be found here - [Tangled Treasures](https://tangled-treasures-v2-c974cba676a4.herokuapp.com/)
 
 ## Credits  
 
@@ -233,16 +260,16 @@ The live link can be found here - [Tangled Treasures]()
 * The main structure and the README file are inspired to the I Think Therefore I Blog and Boutique Ado projects.
 * [W3 School](https://www.w3schools.com/), [StackOverflow.com](https://stackoverflow.com/) and [Slack](https://slack.com/intl/it-it/) were consulted regularly for tips on general coding.
 * I searched for other PP5 projects on GitHub, to make sure I was working in the right direction.
+* Some features, models and styling were inspired by my previous Project Portfolio PP4 [Future Home](https://future-home.herokuapp.com/)
 
 ### Images
 
-* The [homepage]() image was taken from Freepik (<https://www.freepik.com/free-photo/top-view-tea-mug-yarn-basket-with-pine-cones_11630959.htm#page=2&query=crochet&position=33&from_view=search&track=sph>).
-* the pictures used for the various items, were taken from Freepik, Pixabay, Pexels and Vecteezy.
+* The [homepage](./media/homepage.webp) image was taken from Freepik (<https://www.freepik.com/free-photo/top-view-tea-mug-yarn-basket-with-pine-cones_11630959.htm#page=2&query=crochet&position=33&from_view=search&track=sph>).
+* The pictures used for the various items, were taken from Freepik, Pixabay, Pexels and Vecteezy.
 * The [icon]() image was taken from Vecteezy (<https://www.vecteezy.com/free-vector/crochet>).
 * The icons were taken from [Font Awesome](https://fontawesome.com/)
-* The [favicon](./media/) was created uploading the icon image onto [Favicon.io](https://favicon.io/favicon-generator/).
-* The [mockup] was simulated using [AmIResponsive](https://ui.dev/amiresponsive)
-* The colours for the form were selected through [Coolors](https://coolors.co/)
+* The [mockup](./docs/readme_docs/responsiveness.png) was simulated using [AmIResponsive](https://ui.dev/amiresponsive)
+* The colours for the form were selected through [Coolors](https://coolors.co/) based on the homepage picture.
 
 ### Disclaimer
 

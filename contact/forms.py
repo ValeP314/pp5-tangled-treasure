@@ -9,7 +9,7 @@ class ContactForm(forms.ModelForm):
         attrs={'placeholder': 'Email'}))
     contact_message = forms.CharField(widget=forms.Textarea(
         attrs={'placeholder': 'Message'}))
-    
+
     class Meta:
         model = Contact
         fields = ['contact_name', 'contact_email', 'contact_message']
