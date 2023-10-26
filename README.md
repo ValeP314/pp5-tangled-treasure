@@ -170,9 +170,8 @@ The User stories can be found on [Tangled Treasures V2 User Stories](https://git
 * Accessibility
   * Performance, accessibility and best practices were assessed through Lighthouse in devtools and passed the testing with good scores.
     ![Lighthouse](./docs/readme_docs/lighthouse.png)
-  * The Performance score was improved converting the .png files in .webp files, in order to compress the images and facilitate the upload when the page is loaded.
-  * Accessibility can be improved checking lists items, but overall is good.
-  * Best practices and SEO obtained great scores.
+  * The Performance scoreis pretty good, but was improved converting the .png files in .webp files, in order to compress the images and facilitate the upload when the page is loaded.
+  * Accessibility, best practices and SEO obtained great scores.
 
 ### Manual Testing
 
