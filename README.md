@@ -142,31 +142,6 @@ The User stories can be found on [Tangled Treasures V2 User Stories](https://git
 
 ### Validator Testing
 
-* HTML
-  * No errors were returned when passing through the official W3C validator:
-    * [Home Page](./static/images/html_test.png)
-
-* CSS
-  * No errors were found when passing through the official [(Jigsaw) validator]()
-    * [Home Page](http://jigsaw.w3.org/css-validator/validator?lang=it&profile=css3svg&uri=https%3A%2F%2Ffuture-home.herokuapp.com%2F&usermedium=all&vextwarning=&warning=1)
-
-* Python
-  * I used [Python linter](https://pep8ci.herokuapp.com/), and one error was returned on the settings.py file:
-    * Line 128 is too long (87 characters over 79 allowed), but unfortunately it is not possible to modify it.
-    [Settings.py](./static/images/Settings.py.png)
-
-  * The remaining Python files did not show any errors:
-    * [Asgi.py](./static/images/asgy_py.png)
-    * [Urls.py](./static/images/urls_py.png)
-    * [Wsgi.py](./static/images/wsgi_py.png)
-    * [Admin.py](./static/images/admin_py.png)
-    * [Apps.py](./static/images/apps_py.png)
-    * [Forms.py](./static/images/forms_py.png)
-    * [Models.py](./static/images/models_py.png)
-    * [Tests.py](./static/images/tests_py.png)
-    * [Urls.py](./static/images/urls_app_py.png)
-    * [Views.py](./static/images/views_py.png)
-
 * Accessibility
   * Performance, accessibility and best practices were assessed through Lighthouse in devtools and passed the testing with good scores.
     ![Lighthouse](./docs/readme_docs/lighthouse.png)
@@ -227,6 +202,13 @@ The User stories can be found on [Tangled Treasures V2 User Stories](https://git
   * The delete picture functionality was tested checking the relevant box and removing the picture associated with the item, and loading a new one then.
 * Security:
   * I tested the website security trying to access the admin platform when not logged in, and I wasn't able to access the interface as expected.
+* Newsletter:
+  * Mailchimp was setup and tested, and worked well:
+    ![Mailchimp](./docs/readme_docs/mailchimp.png)
+* Facebook page:
+  * A Facebook page was created and linked in the footer:
+    ![Facebook](./docs/readme_docs/facebook_1.png)
+    ![Facebook](./docs/readme_docs/facebook_2.png)
 
 ### Fixed Bugs
 
@@ -251,6 +233,65 @@ The User stories can be found on [Tangled Treasures V2 User Stories](https://git
 ## Deployment
 
 The live link can be found here - [Tangled Treasures](https://tangled-treasures-v2-c974cba676a4.herokuapp.com/)
+
+### Deployment to Heroku
+1. Create an account or log in to [Heroku](https://www.heroku.com/).
+2. On the dashboard, click on "New" and select "Create new app".
+3. Give the app a unique name and select the region closest to you. Then click "Create app" to confirm.
+4. To create a new database that can be accessed by Heroku, create an account or log in to [ElephantSQL](https://customer.elephantsql.com/login).
+5. Click "Create New Instance".
+6. Set up your plan, giving it a name and choosing the "Tiny Turtle (free)" plan.
+7. Select the Region and data center closer to you, and then click "Review" and confirm clicking on "Create instance".
+8. Return to the ElephantSQL dashboard and click on the database instance name for this project.
+9. In the URL section, click the copy icon to copy the database URL.
+10. Install the plugins dj-database-url and psycopg2-binary in terminal.
+11. Run pip3 freeze > requirements.txt so both are added to the requirements.txt file
+12. Create a Procfile in the root directory, adding `web: gunicorn yourapp.wsgi:application`.
+13. Run the migration command in your terminal to migrate your database structure to the newly-connected ElephantSQL database: `python manage.py migrate`
+14. Run "python3 manage.py createsuperuser" to create a superuser.
+15. Load the .json files for categories and items.
+16. Install gunicorn (pip install gunicorn) and add it to the requirements.txt file using the command pip3 freeze > requirements.txt
+17. In ALLOWED_HOSTS, add the Heroku app and localhost to the list: `ALLOWED_HOSTS = ['HEROKU_APP_NAME.herokuapp.com', 'localhost']`
+18. Add a config variable typing `DISABLE_COLLECTSTATIC = 1`.
+19. Connect heroku to the Github repository and allow authomatic deploys.
+20. Deploy the app, and access the website.
+
+### Stripe
+1. Register for a Stripe account.
+2. in the Developers section, click on the API section and copy the publishable and secret keys.
+3. Add STRIPE_PUBLIC_KEY and STRIPE_SECRET_KEY to settings.py and to Heroku, using the values found in the API section.
+4. access the webhooks section and create a webhook.
+5. Choose all events to be visualised and add endpoint.
+6. Add the STRIPE_WH_SECRET variable to the environment and to Heroku.
+
+### AWS 
+1. Register for a AWS Management Console account.
+2. Access S3 and create a bucket.
+3. Set up parameters and authorisation to the bucket properties (static hosting property, CORS and bucket policy).
+4. Access IAM and create a group.
+5. Create a Policy for the group.
+6. Create a User and link the three.
+7. Download a csv file from the User page, that contains the user access key and the secret access key.
+8. Install boto3 and django storages, and freeze the requirements.txt file.
+9. Add the AWS variables to settings.py, to connect the static storage space to the app.
+10. Create a media folder, to store all media into AWS.
+
+
+### Forking the Repository
+Forking creates your own copy of another existing repository in the remote location.
+In order to fork this repository:
+1. Locate the [Tangled Treasures](https://github.com/ValeP314/pp5-tangled-treasures-v2) repository on GitHub.
+2. Select "Fork" on the top right side of the page.
+3. A copy of the repository will be saved on your GitHub account.
+
+### Cloning the repository
+Cloning makes a local copy of a repository, and retains a link to its original repository. If you would like to make changes directly to a repository you have the permission to contribute to, then cloning will be the first step before we implement the actual changes and push.
+1. Locate the [Tangled Treasures](https://github.com/ValeP314/pp5-tangled-treasures-v2) repository on GitHub.
+2. Click on the "Code" menu and select one of the cloning options: HTTPS, SSH, and GitHub CLI, copying the link provided.
+3. Open a Terminal.
+4. Change the current working directory to the location where you want the cloned directory.
+5. Type `git clone`, and then paste the URL you copied earlier (in step 2).
+6. Press "Clone" and a new clone will be created.
 
 ## Credits  
 
